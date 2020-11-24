@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "330206688307",
+    "firebase_url": "https://exampleabsensiapp.firebaseio.com",
+    "project_id": "exampleabsensiapp",
+    "storage_bucket": "exampleabsensiapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330206688307:android:42f2541cd5dbbf9b881f46",
+        "android_client_info": {
+          "package_name": "io.github.dzulfikar68.exampleabsensiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330206688307-mohf0tp5i5ue14sdhq7rqncjen9i1gai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa9mdAReNktRKkmN4M0cOiUB7XAoEmu0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330206688307-mohf0tp5i5ue14sdhq7rqncjen9i1gai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
