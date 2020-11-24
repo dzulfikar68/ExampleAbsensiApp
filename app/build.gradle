@@ -54,6 +54,7 @@ dependencies {
     // koin
     implementation "org.koin:koin-core:2.1.6"
     implementation "org.koin:koin-core-ext:2.1.6"
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
     testImplementation "org.koin:koin-test:2.1.6"
 
     // retrofit

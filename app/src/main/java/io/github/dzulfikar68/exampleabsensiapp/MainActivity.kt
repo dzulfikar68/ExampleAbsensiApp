@@ -7,6 +7,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.iid.FirebaseInstanceId
+import com.google.firebase.messaging.FirebaseMessaging
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,5 +43,17 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        try {
+            FirebaseMessaging.getInstance().subscribeToTopic("news")
+            println("@ABSEN: Subcribed token")
+        } catch (e: Exception) {
+            println("@ABSEN: Failed Subcribed")
+        }
+
+        FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener { instanceIdResult ->
+            val deviceToken = instanceIdResult.token
+            println("@ABSEN: Refreshed token $deviceToken")
+        }
     }
 }
