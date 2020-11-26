@@ -7,7 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemAdapter(
-        private val items: List<UserItem>
+        private val items: List<UserItem>,
+        private val event: (UserItem) -> Unit
 ) : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int = items.size
@@ -21,7 +22,10 @@ class ItemAdapter(
         val item = items[position]
         holder.tvName?.text = item.name
         holder.tvAbsen?.text = item.absen
-        holder.tvTimeAndDate?.text = "Time = ${item.date}"
+        holder.tvTimeAndDate?.text = "@ ${item.date}"
+        holder.itemView.setOnClickListener {
+            event.invoke(item)
+        }
     }
 
     inner class ViewHolder(row: View) : RecyclerView.ViewHolder(row) {

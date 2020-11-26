@@ -11,15 +11,6 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/view_item" />
 
-    <TextView
-        android:id="@+id/tvEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="tidak ada hasil"
-        android:textStyle="italic"
-        android:visibility="visible" />
-
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="wrap_content"
