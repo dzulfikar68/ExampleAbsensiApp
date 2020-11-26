@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity() {
                         )
                 )?.addOnSuccessListener {
                     dialog.dismiss()
-                    postNotification()
+                    postNotification(absen, name)
                     Toast.makeText(this, "Submit Data Success", Toast.LENGTH_LONG).show()
                 }
             } else {
@@ -178,14 +178,14 @@ class MainActivity : AppCompatActivity() {
         timeRunnable?.let { timeHandler?.post(it) }
     }
 
-    private fun postNotification() {
+    private fun postNotification(absen: String?, name: String?) {
         val volleyQueue = Volley.newRequestQueue(this)
 
         val params = JSONObject().let {
             it.put("to", "${AbsensiFirebaseConstants.FIREBASE_DEVICE_TOKEN}/${getString(R.string.default_notification_channel_name)}")
             it.put("notification", JSONObject().apply {
-                put("title", "Portugal vs. Denmark")
-                put("body", "great match!")
+                put("title", absen)
+                put("body", name)
                 put("sound", "default")
                 put("content_available", true)
                 put("priority", "high")
