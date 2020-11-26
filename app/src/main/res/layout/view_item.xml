@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTimeAndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAbsen"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="Time | Date"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvService"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:text="Service"-->
+        <!--            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/tvAbsen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_right_bottom"
+            android:padding="7dp"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvCost"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:gravity="end"-->
+        <!--            android:text="Cost"-->
+        <!--            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_rounded_left_bottom"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:padding="7dp"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

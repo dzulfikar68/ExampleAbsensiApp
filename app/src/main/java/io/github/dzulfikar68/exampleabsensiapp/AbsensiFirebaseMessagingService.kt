@@ -15,7 +15,7 @@ class AbsensiFirebaseMessagingService : FirebaseMessagingService() {
 
     override fun onNewToken(token: String) {
         super.onNewToken(token)
-        println("@ABSEN: Refreshed token ${token}")
+        println("Refreshed token: ${token}")
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
@@ -47,8 +47,7 @@ class AbsensiFirebaseMessagingService : FirebaseMessagingService() {
             getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel =
-                NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT)
+            val channel = NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT)
             notificationBuilder.setChannelId(channelId)
             mNotificationManager.createNotificationChannel(channel)
         }

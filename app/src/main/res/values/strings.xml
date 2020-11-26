@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ExampleAbsensiApp</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
-    <string name="default_notification_channel_name">news</string>
+    <string name="default_notification_channel_name">absensi</string>
 </resources>
